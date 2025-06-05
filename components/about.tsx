@@ -64,7 +64,7 @@ const values = [
 export default function About({ onNavigate }: AboutProps) {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      <div className="container mx-auto px-16 py-24">
+      <div className="container lg:px-16 px-8 py-24 mx-auto  ">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 100 }}
@@ -74,7 +74,7 @@ export default function About({ onNavigate }: AboutProps) {
         >
           <div>
             <h2
-              className="text-7xl font-bold tracking-wider mb-12 text-white"
+              className="lg:text-7xl text-3xl font-bold tracking-wider mb-12 text-white"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
               ABOUT <span className="text-violet-500">EUTOPIA</span>
@@ -126,7 +126,7 @@ export default function About({ onNavigate }: AboutProps) {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mb-32"
         >
-          <h3 className="text-4xl font-bold mb-16 text-center text-white">
+          <h3 className="lg:text-4xl text-3xl font-bold lg:mb-16 mb-10 text-center text-white">
             OUR CORE <span className="text-violet-500">VALUES</span>
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

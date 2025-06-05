@@ -2,10 +2,13 @@
 
 import { motion } from "framer-motion"
 import { Home, Trees, Hammer, ArrowRight } from "lucide-react"
+import { useMedia } from 'use-media'
 
 interface ServicesProps {
   onNavigate: (direction: "left" | "right") => void
 }
+
+
 
 const services = [
   {
@@ -72,14 +75,14 @@ export default function Services({ onNavigate }: ServicesProps) {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="container mx-auto px-16 py-24"
+        className="container mx-auto px-8 lg:px-16 py-24"
       >
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-7xl font-bold tracking-wider mb-6 text-white"
+            className="lg:text-7xl text-5xl font-bold tracking-wider mb-6 text-white"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
             OUR <span className="text-violet-500">SERVICES</span>
@@ -88,7 +91,7 @@ export default function Services({ onNavigate }: ServicesProps) {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl opacity-70 max-w-3xl mx-auto text-white"
+            className="text-l lg:text-xl opacity-70 max-w-3xl mx-auto text-white"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Comprehensive architectural solutions that bring your vision to life through expert design, sustainable
@@ -106,14 +109,14 @@ export default function Services({ onNavigate }: ServicesProps) {
               transition={{ duration: 0.8, delay: 0.6 + index * 0.3 }}
               className={`${service.color} ${service.textColor} rounded-2xl overflow-hidden group cursor-pointer`}
             >
-              <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+              <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[900px] lg:min-h-[600px]">
                 {/* Content Side */}
-                <div className="p-16 flex flex-col justify-center">
+                <div className="lg:p-16 p-8 flex flex-col justify-center">
                   <div className="mb-8">
-                    <service.icon size={48} className="mb-6 opacity-80" />
-                    <h3 className="text-5xl font-bold mb-4 tracking-wider">{service.title}</h3>
-                    <h4 className="text-xl opacity-80 mb-8">{service.subtitle}</h4>
-                    <p className="text-lg leading-relaxed opacity-90 mb-12">{service.description}</p>
+                    <service.icon  className="lg:mb-6  mb-4 opacity-80 w-9 h-9 lg:w-12 lg:h-12" />
+                    <h3 className="text-2xl lg:text-5xl font-bold lg:mb-4 mb-2 tracking-wider">{service.title}</h3>
+                    <h4 className="text-lg lg:text-xl opacity-80 mb-6 lg:mb-8">{service.subtitle}</h4>
+                    <p className="text-lg leading-relaxed opacity-90 mb-4 lg:mb-12">{service.description}</p>
                   </div>
 
                   {/* Features */}
@@ -168,10 +171,10 @@ export default function Services({ onNavigate }: ServicesProps) {
           transition={{ duration: 0.8, delay: 2 }}
           className="text-center mt-32"
         >
-          <h3 className="text-4xl font-bold mb-8 text-white">
+          <h3 className="lg:text-4xl text-2xl font-bold mb-8 text-white">
             Ready to Start Your <span className="text-violet-500">Project</span>?
           </h3>
-          <p className="text-xl opacity-70 mb-12 max-w-2xl mx-auto text-white">
+          <p className="lg:text-xl text-lg opacity-70 mb-12 max-w-2xl mx-auto text-white">
             Let's discuss how we can bring your architectural vision to life with our comprehensive design and
             construction services.
           </p>
